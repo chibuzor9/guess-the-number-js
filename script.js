@@ -1,6 +1,6 @@
 //Code Written by Chibuzor Emmanuel
 
-'use strict';
+'use strict'
 
 // Selecting elements
 const body = document.querySelector('body')
@@ -12,10 +12,8 @@ const score = document.querySelector('.score')
 const number = document.querySelector('.number')
 const highscore = document.querySelector('.highscore')
 
-
 // Generating a random number
-let actual_value = Math.trunc(Math.random() * 20) + 1;
-
+let actual_value = Math.trunc(Math.random() * 20) + 1
 
 // Event Listeners
 again.addEventListener('click', function () {
@@ -28,22 +26,20 @@ again.addEventListener('click', function () {
 check.addEventListener('click', function () {
     if (Number(score.textContent)) {
         if (guess.value == actual_value) {
-            message.textContent = '🎉 Correct Number!';
-            body.style.backgroundColor = '#60b347';
-            number.textContent = actual_value;
-            check_highscore();
+            message.textContent = '🎉 Correct Number!'
+            body.style.backgroundColor = '#60b347'
+            number.textContent = actual_value
+            check_highscore()
         } else {
             low_or_high(guess.value)
             score.textContent = Number(score.textContent) - 1
         }
-    }
-    else {
-        message.textContent = '😭 You lost the game!';
+    } else {
+        message.textContent = '😭 You lost the game!'
         score.textContent = 0
-        body.style.backgroundColor = '#ff0000';
+        body.style.backgroundColor = '#ff0000'
     }
 })
-
 
 // Functions
 function check_highscore() {
@@ -56,8 +52,8 @@ function check_highscore() {
 
 function low_or_high(num) {
     if (num > actual_value) {
-        message.textContent = '📈 Too High!';
+        message.textContent = '📈 Too High!'
     } else {
-        message.textContent = '📉 Too Low!';
+        message.textContent = '📉 Too Low!'
     }
 }

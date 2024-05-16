@@ -12,17 +12,17 @@ To play the game, simply open the `index.html` file in a web browser.
 
 ## Features
 
-- Generates a random number between 1 and 20 for the player to guess.
-- Provides feedback on each guess, indicating whether the guess is too high or too low.
-- Tracks the player's score, starting at 20 and decreasing with each incorrect guess.
-- Keeps track of the player's high score, updating it when a new high score is achieved.
-- Allows the player to play again with a single click.
+-   Generates a random number between 1 and 20 for the player to guess.
+-   Provides feedback on each guess, indicating whether the guess is too high or too low.
+-   Tracks the player's score, starting at 20 and decreasing with each incorrect guess.
+-   Keeps track of the player's high score, updating it when a new high score is achieved.
+-   Allows the player to play again with a single click.
 
 ## Files Included
 
-- `index.html`: Contains the HTML structure of the game interface.
-- `style.css`: Provides styling for the game interface.
-- `script.js`: Contains the JavaScript code for game functionality.
+-   `index.html`: Contains the HTML structure of the game interface.
+-   `style.css`: Provides styling for the game interface.
+-   `script.js`: Contains the JavaScript code for game functionality.
 
 ## Installation
 
@@ -35,4 +35,3 @@ To play the game, simply open the `index.html` file in a web browser.
 ## Credits
 
 This project was created by Chibuzor Emmanuel.
-
