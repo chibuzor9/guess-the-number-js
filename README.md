@@ -26,7 +26,7 @@ To play the game, simply open the `index.html` file in a web browser.
 
 ## Installation
 
-1. Clone the repository to your local machine: git clone [https://github.com/chibuzor9/guess-the-number-js.git]
+1. Clone the repository to your local machine: git clone `https://github.com/chibuzor9/guess-the-number-js.git`
 
 2. Navigate to the project directory.
 
@@ -35,8 +35,4 @@ To play the game, simply open the `index.html` file in a web browser.
 ## Credits
 
 This project was created by Chibuzor Emmanuel.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
