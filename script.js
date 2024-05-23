@@ -21,6 +21,7 @@ again.addEventListener('click', function () {
     guess.value = ''
     score.textContent = 20
     body.style.backgroundColor = '#222'
+    number.textContent = '?'
 })
 
 check.addEventListener('click', function () {
@@ -32,7 +33,6 @@ check.addEventListener('click', function () {
             check_highscore()
         } else {
             low_or_high(guess.value)
-            score.textContent = Number(score.textContent) - 1
         }
     } else {
         message.textContent = '😭 You lost the game!'
@@ -51,9 +51,15 @@ function check_highscore() {
 }
 
 function low_or_high(num) {
-    if (num > actual_value) {
-        message.textContent = '📈 Too High!'
+    if (num == '') {
+        message.textContent = '⛔ No Number!'
     } else {
-        message.textContent = '📉 Too Low!'
+        score.textContent = Number(score.textContent) - 1
+        
+        if (num > actual_value) {
+            message.textContent = '📈 Too High!'            
+        } else {
+            message.textContent = '📉 Too Low!'
+        }
     }
 }
