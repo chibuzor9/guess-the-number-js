@@ -17,7 +17,7 @@ let actual_value = Math.trunc(Math.random() * 20) + 1
 
 // Event Listeners
 again.addEventListener('click', function () {
-    message.textContent = 'Start guessing...'
+    displayMessage('Start guessing...')
     guess.value = ''
     score.textContent = 20
     body.style.backgroundColor = '#222'
@@ -27,7 +27,7 @@ again.addEventListener('click', function () {
 check.addEventListener('click', function () {
     if (Number(score.textContent)) {
         if (guess.value == actual_value) {
-            message.textContent = '🎉 Correct Number!'
+            displayMessage('🎉 Correct Number!')
             body.style.backgroundColor = '#60b347'
             number.textContent = actual_value
             check_highscore()
@@ -35,7 +35,7 @@ check.addEventListener('click', function () {
             low_or_high(guess.value)
         }
     } else {
-        message.textContent = '😭 You lost the game!'
+        displayMessage('😭 You lost the game!')
         score.textContent = 0
         body.style.backgroundColor = '#ff0000'
     }
@@ -52,14 +52,18 @@ function check_highscore() {
 
 function low_or_high(num) {
     if (num == '') {
-        message.textContent = '⛔ No Number!'
+        displayMessage('⛔ No Number!')
     } else {
         score.textContent = Number(score.textContent) - 1
-        
+
         if (num > actual_value) {
-            message.textContent = '📈 Too High!'            
+            displayMessage('📈 Too High!')            
         } else {
-            message.textContent = '📉 Too Low!'
+            displayMessage('📉 Too Low!')
         }
     }
+}
+
+function displayMessage(str) {
+    message.textContent = str
 }
